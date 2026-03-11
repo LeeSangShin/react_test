@@ -4,7 +4,8 @@
 <mapper namespace="com.work.db.mapper.UserMapper">
 
     <select id="selectUserList" resultType="user">
-        SELECT ID
+        SELECT ROW_NUMBER() OVER() as ROWNUM
+             , ID
              , NAME
              , AGE
         FROM DEV_USER
@@ -16,7 +17,7 @@
              , AGE
         FROM DEV_USER
         WHERE 1=1
-        <if test="id != null">
+        <if test="searchId != null">
             AND ID = #{searchId}
         </if>
         <if test="name != null">

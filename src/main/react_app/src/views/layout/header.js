@@ -10,9 +10,10 @@ function Header() {
                     </div>
                     <nav className='navigation'>
                         <ul>
-                            <li><Link to="/d1">메뉴1</Link></li>
-                            <li><Link to="/d2">메뉴2</Link></li>
                             <li><Link to="/">홈으로</Link></li>
+                            <li><Link to="/d1">단순요청</Link></li>
+                            <li><Link to="/d2">메뉴2</Link></li>
+                            <li><Link to="/gridPage">그리드</Link></li>
                         </ul>
                     </nav>
                 </div>

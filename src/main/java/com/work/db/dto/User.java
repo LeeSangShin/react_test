@@ -7,7 +7,7 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User extends BasicDto{
     private String searchId;
     private String searchName;
 

@@ -7,7 +7,6 @@ import Layout from './views/layout/layout.js';
 function App() {
   return (
     <>
-    <Layout />
     </>
   );
 }
