@@ -12,4 +12,6 @@ import com.work.db.dto.User;
 public interface UserMapper {
     List<User> selectUserList();
     User selectUser(User param);
+    String checkUserId(User param);
+    int createUser(User param);
 }

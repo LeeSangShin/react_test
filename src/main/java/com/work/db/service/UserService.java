@@ -19,6 +19,12 @@ public List<User> getUserList() {
 }
 public User getUser(User param) {
     return userMapper.selectUser(param);
+}
+public String checkUserId(User param) {
+    return userMapper.checkUserId(param);
+}
+public int createUser(User param) {
+    return userMapper.createUser(param);
 } 
 
 }

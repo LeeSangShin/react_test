@@ -20,7 +20,7 @@ export default function ConnBackEnd() {
               .catch(error => console.error(error));
       }
       function getAllUser_axios(){
-        Axios.get("/api/getAllUser")
+        Axios.post("/api/getAllUser")
               .then(response => {
                 setUserList(response.data);
                 setReqSt('Axios');

@@ -24,4 +24,27 @@
             AND NAME LIKE '%' || #{searchName} || '%'
         </if>
     </select>
+
+    <select id="checkUserId" parameterType="user" resultType="String">
+        SELECT 'N'
+        FROM DEV_USER
+        WHERE ID = #{id}
+    </select>
+
+    <insert id="createUser" parameterType="user">
+        INSERT INTO DEV_USER(
+            ID
+            , NAME
+            , AGE
+            , REGDATE
+            , UPDDATE
+        )
+        VALUES (
+            #{id}
+            , #{name}
+            , CAST(#{age} AS INTEGER)
+            , NOW()
+            , NOW()
+            )
+    </insert>
 </mapper>
